@@ -60,5 +60,6 @@ RUN set -xe \
 COPY ./scrapyd.conf /etc/scrapyd/
 VOLUME /etc/scrapyd/ /var/lib/scrapyd/
 EXPOSE 6800
+ENV LANG C.UTF-8
 
 CMD ["scrapyd"]
