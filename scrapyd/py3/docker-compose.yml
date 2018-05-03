@@ -1,5 +1,6 @@
 scrapyd:
-  image: vimagick/scrapyd:py3
+  # image: yoshwata/scrapyd
+  build: .
   ports:
     - "6800:6800"
   volumes:

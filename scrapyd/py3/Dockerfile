@@ -32,6 +32,8 @@ RUN set -xe \
                           libwebp-dev \
                           zlib1g \
                           zlib1g-dev \
+    && apt-get install -y tzdata && \
+                          ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
     && curl -sSL https://bootstrap.pypa.io/get-pip.py | python3 \
     && pip install git+https://github.com/scrapy/scrapy.git \
                    git+https://github.com/scrapy/scrapyd.git \
